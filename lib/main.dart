@@ -265,7 +265,7 @@ class _ScanBluePageState extends State<ScanBluePage> {
   /// 断开连接
   void _disconnect() async {
     setState(() {
-      _isButtonUnavailable = true;
+      // _isButtonUnavailable = true;
       //清空初始数据列表
       initDataList.clear();
       finalDataList.clear();
@@ -305,8 +305,8 @@ class _ScanBluePageState extends State<ScanBluePage> {
         dataToString = tempDataToString;
         finalDataList = tempDataList;
         warn1 = finalDataList[0] >= finalDataList[6];
-        warn1 = finalDataList[1] >= finalDataList[7];
-        warn1 = finalDataList[5] >= finalDataList[8];
+        warn2 = finalDataList[1] >= finalDataList[7];
+        warn3 = finalDataList[5] >= finalDataList[8];
       });
     }
 
@@ -537,7 +537,7 @@ class _ScanBluePageState extends State<ScanBluePage> {
         },
         onTapUp: (e) {
           if (_connected) {
-            _sendMessage(message);
+            _sendMessage(7);
             if (colorInt == 1) {
               setState(() {
                 changeColor = Colors.green;
