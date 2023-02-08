@@ -338,7 +338,7 @@ class _ScanBluePageState extends State<ScanBluePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("蓝牙天气检测工具"),
+        title: const Text("蓝牙天气监测工具"),
         actions: [
           //蓝牙开关
           Row(
@@ -422,15 +422,13 @@ class _ScanBluePageState extends State<ScanBluePage> {
           const SizedBox(height: 20),
           //发送按钮
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            _buildSendButton(0),
-            _buildSendButton(1),
-            _buildSendButton(2),
-            _buildSendButton(3),
+            _buildSendButton(2, "1"),
+            _buildSendButton(3, "2"),
+            _buildSendButton(4, "3"),
           ]),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            _buildSendButton(4),
-            _buildSpecialSendButton(5, 1),
-            _buildSpecialSendButton(6, 2),
+            _buildSpecialSendButton(4, 1),
+            _buildSpecialSendButton(5, 2),
           ]),
           const SizedBox(height: 20),
           Column(
@@ -481,12 +479,12 @@ class _ScanBluePageState extends State<ScanBluePage> {
   }
 
   ///普通发送按钮ui
-  Widget _buildSendButton(int message) {
+  Widget _buildSendButton(int message, String tip) {
     return Padding(
       padding: const EdgeInsets.all(4),
       child: ElevatedButton(
         onPressed: _connected ? () => _sendMessage(message) : null,
-        child: Text("按钮" + message.toString()),
+        child: Text("按钮" + tip),
       ),
     );
   }
