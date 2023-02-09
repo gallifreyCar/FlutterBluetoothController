@@ -427,8 +427,8 @@ class _ScanBluePageState extends State<ScanBluePage> {
             _buildSendButton(4, "3"),
           ]),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            _buildSpecialSendButton(4, 1),
-            _buildSpecialSendButton(5, 2),
+            _buildSpecialSendButton(5, 1, "4o"),
+            _buildSpecialSendButton(6, 2, "5"),
           ]),
           const SizedBox(height: 20),
           Column(
@@ -494,7 +494,7 @@ class _ScanBluePageState extends State<ScanBluePage> {
   Color changeColor2 = Colors.green;
 
   ///特殊发送按钮ui
-  Widget _buildSpecialSendButton(int message, int colorInt) {
+  Widget _buildSpecialSendButton(int message, int colorInt, String tip) {
     return GestureDetector(
         child: Container(
           decoration: BoxDecoration(
@@ -514,7 +514,7 @@ class _ScanBluePageState extends State<ScanBluePage> {
           margin: const EdgeInsets.all(10),
           alignment: Alignment.center,
           child: Text(
-            "按钮" + message.toString(),
+            "按钮" + tip,
             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
