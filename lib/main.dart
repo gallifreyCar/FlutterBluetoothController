@@ -427,7 +427,7 @@ class _ScanBluePageState extends State<ScanBluePage> {
             _buildSendButton(4, "3"),
           ]),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            _buildSpecialSendButton(5, 1, "4o"),
+            _buildSpecialSendButton(5, 1, "4"),
             _buildSpecialSendButton(6, 2, "5"),
           ]),
           const SizedBox(height: 20),
