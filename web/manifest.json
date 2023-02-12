@@ -1,6 +1,6 @@
 {
-    "name": "hellow_world",
-    "short_name": "hellow_world",
+    "name": "bluetooth_controller",
+    "short_name": "bluetooth_controller",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

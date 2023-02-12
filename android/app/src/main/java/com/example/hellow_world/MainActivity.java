@@ -1,4 +1,4 @@
-package com.example.hellow_world;
+package com.example.bluetooth_controller;
 
 import io.flutter.embedding.android.FlutterActivity;
 
